@@ -1,0 +1,59 @@
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .accordion-header:hover {
+    color: rgb(252, 131, 230);
+}
+
+.dark-theme header {
+    background: #3c3c3c;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.1);
+}
+.dark-theme header span,
+.dark-theme nav a {
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0px 0px rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme nav a:hover {
+    background: #6a11cb;
+    color: rgb(252, 131, 230);
+}
+.dark-theme .course {
+    background: #222;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+.dark-theme .course:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.dark-theme h1 span,
+.dark-theme h2 span {
+    background: #bb86fc;
+    color:#1e1e1e;
+}
+.dark-theme main,
+.dark-theme p,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme .course p {
+    color: rgb(189, 189, 189);
+}
+.dark-theme footer {
+    background-color: rgb(62, 62, 62);
+}
+.dark-theme .breadcrumbs span {
+    color: #bb86fc;
+}
+.dark-theme .text-block,
+.dark-theme .centered-block {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    background: #222;
+}
+
+.dark-theme .theme-toggle:hover{
+    box-shadow: 0 0 25px #eddeff;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по программированию</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Логотип" class="logo">
+            <span class="logo-text">WEB-programming</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="html_course.html">HTML</a></li>
+                <li><a href="css_course.html">CSS</a></li>
+                <li><a href="js_course.html">JavaScript</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-toggle"><img id="themeIcon" src="../icons/icon_moon.png" alt="Тема"></button>
+        </nav>
+    </header>
+    <script defer src="js/scrollToTopButton.js"></script>
+    <script defer src="js/darkTheme.js" class="theme-toggle"></script>
+    <script defer src="js/realTime.js"></script>
+    <main>
+        <div class="floating_window" id="timeNow"></div> 
+        <div class="decor plus floating"></div>
+        <div class="decor ring floating"></div>
+        <section>     
+                <h1>Курс по <span>программированию</span></h1>
+                    <div class="courses">
+                        <a href="html_course.html">
+                            <div class="course html">
+                                <img src="img/html-logo.png" alt="HTML">
+                                <p>HTML<br>Каркас сайта</p>
+                            </div>
+                        </a>
+                        <a href="css_course.html">
+                            <div class="course css">
+                                <img src="img/css-logo.png" alt="CSS">
+                                <p>CSS<br>Стиль сайта</p>
+                            </div>
+                        </a>
+                        <a href="js_course.html">
+                            <div class="course js">
+                                <img src="img/js-logo.png" alt="JavaScript">
+                                <p>JavaScript<br>Оживление сайта</p>
+                            </div>
+                        </a>
+                    </div>
+        </section>
+        <section class="intro">
+            <h2 class="intro-title">
+                <span>Создай</span> свой первый сайт
+            </h2>
+            <p>
+                Если вы начинаете с нуля, веб-разработка может оказаться непростой — мы будем держать вас за руку и давать вам достаточно подробностей, чтобы вы чувствовали себя комфортно и как следует изучили темы.
+                Вы должны чувствовать себя как дома, независимо от того, студент ли вы, изучающий веб-разработку (самостоятельно или на занятиях), преподаватель, ищущий учебные материалы, любитель или кто-то, кто просто хочет больше узнать о том, как работают веб-технологии.
+            </p>
+        </section>
+    </main>
+    <button id="scrollToTop">↑</button>
+    <div class="spacer_0"></div>
+    <footer class="footer">
+        <p>© 2024 Лучший сайт. Все права защищены.</p>
+    </footer>
+    <script defer src="js/footerHid.js"></script>
+</body>
+</html>

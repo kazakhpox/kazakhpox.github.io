@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс по программированию</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dark.css">
+    <link rel="stylesheet" href="css/accordion.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.png" alt="Логотип" class="logo">
+            <span class="logo-text">WEB-programming</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="html_course.html">HTML</a></li>
+                <li><a href="css_course.html">CSS</a></li>
+                <li><a href="js_course.html">JavaScript</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-toggle"><img id="themeIcon" src="../icons/icon_moon.png" alt="Тема"></button>
+        </nav>
+    </header>
+    <script src="js/scrollToTopButton.js"></script>
+    <script src="js/darkTheme.js" class="theme-toggle"></script>
+    <script src="js/accordion.js"></script>
+    <script defer src="js/realTime.js"></script>
+    <main>
+        <div class="floating_window" id="timeNow"></div> 
+        <div class="decor plus floating"></div>
+        <div class="decor cylinder floating"></div>
+        <div>
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a> /
+                <a href="css_course.html"><span>CSS Курс</span></a>
+            </nav>
+            <section class="centered-block">
+                <h2 class="title"><span>CSS</span></h2>
+                <p class="description">Cascading Style Sheets (CSS) — каскадные таблицы стилей, которые позволяют оформлять содержимое страницы в соответствии с описанными правилами. Стили текста, расположение блоков на странице, анимация — всё это описывается с помощью каскадных таблиц стилей</p>
+            </section>
+            <section class="info-section">
+                <div class="text-block left">
+                    <h2>Где используется CSS?</h2>
+                    <p>CSS – это мощный и гибкий язык стилей, который используется для оформления веб-страниц и интерфейсов. С его помощью ты создашь красивые и адаптивные сайты, добавишь анимации и эффекты, а также научишься делать удобные пользовательские интерфейсы. CSS легко освоить, он востребован в веб-разработке, а его сочетание с HTML и JavaScript открывает широкие возможности для карьеры в IT</p>
+                </div>
+                <div class="text-block right">
+                    <h2>Чему вы научитесь на курсе “Основы CSS”</h2>
+                    <p>Разберётесь в базовом синтаксисе CSS — это фундаментальный навык, который позволит вам оформлять веб-страницы и управлять их внешним видом. После курса вы сможете задавать стили для текста, блоков и элементов, настраивать их размеры, отступы и цвет, а также располагать элементы на странице с помощью Flexbox</p>
+                </div>
+            </section>
+            <section>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">1. Введение в CSS</div>
+                        <div class="accordion-content">
+                            <p>• HTML разметка • Теги • Текст в HTML • Вложенность тегов • Атрибуты HTML</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">2. Стили текста</div>
+                        <div class="accordion-content">
+                            <p>Описание текстовых элементов.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">3. Блочные элементы</div>
+                        <div class="accordion-content">
+                            <p>Работа с изображениями, видео и аудио.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">4. Расположение элементов с помощью Flex</div>
+                        <div class="accordion-content">
+                            <p>Общие принципы структуры документа.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">5. Разное</div>
+                        <div class="accordion-content">
+                            <p>Создание форм и их элементов.</p>
+                        </div>
+                    </div>
+                </div>      
+            </section>
+            <script src="js/accordion.js"></script>
+        </div>
+        <div class="spacer_3"></div>
+        <footer class="footer">
+            <p>© 2024 Круче некуда сайт. Все права защищены.</p>
+        </footer>
+    </main>
+    <button id="scrollToTop">↑</button>
+    <script src="js/footerHid.js"></script>
+</body>
+</html>
