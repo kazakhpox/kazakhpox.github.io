@@ -434,3 +434,25 @@ h1 span {
     border-radius: 10px;
     box-shadow: 0 4px 10px #767676;
 }
+
+::-webkit-scrollbar {
+    width: 10px; /* ширина вертикального скроллбара */
+    height: 10px; /* высота горизонтального скроллбара */
+  }
+  
+  /* Фоновая часть трека */
+  ::-webkit-scrollbar-track {
+    background: #f0f0f0; /* светло-серый фон */
+    border-radius: 5px;
+  }
+  
+  /* Ползунок (сам движущийся элемент) */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* цвет ползунка */
+    border-radius: 5px;
+  }
+  
+  /* При наведении */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

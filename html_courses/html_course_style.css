@@ -55,13 +55,11 @@ body {
 
 .left {
   width: 40%;
-  background: #ffffff;
   border-right: 1px solid #ccc;
 }
 
 .right {
   width: 60%;
-  background: #f9f9f9;
 }
 
 textarea {
