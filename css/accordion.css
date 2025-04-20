@@ -29,6 +29,8 @@
 .accordion-content {
     padding: 15px;
     display: none;
+    font-size: 20px;
+    align-items: left;
 }
 .accordion-header::after {
     content: "\25BC";
@@ -40,3 +42,10 @@
 .accordion-item.active .accordion-header::after {
     content: "\25B2";
 }
+a {
+    color: black;        /* цвет текста */
+    text-decoration: none; /* убираем подчёркивание */
+}
+a:hover {
+    color: #8a2be2;      /* при наведении */
+  }
