@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Урок</title>
+  <link rel="stylesheet" href="../html_courses/html_course_style.css">
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/dark.css">
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <nav class="breadcrumbs">
+        <a href="../index.html">Главная</a> /
+        <a href="../html_course.html">HTML Курс</a> /
+        <a href="../html_courses/html_course_2_1.html"><span>HTML: Параграфы</span></a>
+    </nav>
+    <h2>HTML: Параграфы</h2>
+    <p>Параграфы являются основным способом структурирования большого текста на небольшие логические части. Такие части автоматически разделяются отступами, что делает текст более удобным для восприятия и не отпугивает пользователей.</p>
+    <p>Чаще всего параграфы используются в больших текстах. Например, статьи на Хекслете или Code Basics разбиты на параграфы для удобства чтения, как и этот урок.</p>
+    <p>Текст делится на небольшие смысловые блоки, что не только упрощает чтение, но и позволяет быстрее находить нужную информацию в объёмном тексте.</p>
+    <p>Для создания параграфов используется парный тег <span class="red">&lt;p&gt;</span>, внутрь которого помещается текст.</p>
+    <h3>Например:</h3>
+    <div class="code-block">
+        <pre><code>&lt;p&gt;Первый параграф&lt;/p&gt;
+&lt;p>Второй параграф&lt;/p&gt;</code></pre>
+    </div>
+    <p>Вот как они выглядят в браузере:</p>
+    <div class="code-block">
+        <pre><code>Первый параграф
+Второй параграф</code></pre>
+    </div>
+    <h3>Задание</h3>
+    <p>Оберните фразу Hello, World в тег параграфа</p>
+    <h3>Полезное</h3>
+    <p>Параграфы нельзя вкладывать друг в друга</p>
+    <h3>Определения</h3>
+    <p><b>Параграф</b></p>
+    <p>Небольшой блок текста, отделяемый от остального содержимого отступами снизу и сверху</p>
+  </div>
+  <div class="right">
+    <h2>Редактор</h2>
+    <textarea id="code" placeholder="Введите HTML-код..."></textarea>
+    <button onclick="runCode()">Запустить</button>
+
+    <h3>Вывод:</h3>
+    <div id="output"></div>
+  </div>
+</div>
+<script src="../html_courses/html_course_script.js"></script>
+</body>
+</html>
