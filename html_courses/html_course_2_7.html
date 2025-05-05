@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Урок</title>
+  <link rel="stylesheet" href="../html_courses/html_course_style.css">
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/dark.css">
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <nav class="breadcrumbs">
+        <a href="../index.html">Главная</a> /
+        <a href="../html_course.html">HTML Курс</a> /
+        <a href="../html_courses/html_course_2_7.html"><span>Объединение ячеек внутри строк и столбцов</span></a>
+    </nav>
+    <h2>Объединение ячеек внутри строк и столбцов</h2>
+    <p>В таблицах часто возникает необходимость объединять строки или столбцы, чтобы упростить представление данных. Это позволяет избежать дублирования информации. Например, в складской таблице можно объединить ячейки и указать, что товара нет на складе, вместо повторения этой информации в каждой строке.</p>
+    <div class="code-block">
+      <pre><code><table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+        <thead>
+          <tr>
+            <th>Товар</th>
+            <th>Количество</th>
+            <th>Статус</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Шоколад «Кака-Тошка»</td>
+            <td>0</td>
+            <td rowspan="2">Нет на складе</td> <!-- Объединение двух строк -->
+          </tr>
+          <tr>
+            <td>Шоколад «Картошка»</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table></code></pre>
+  </div>
+  <p>В HTML для объединения ячеек в строках или столбцах используются специальные атрибуты <span class="red">colspan</span> и <span class="red">rowspan</span>. Значение атрибута указывает количество ячеек, которые нужно объединить: для <span class="red">colspan</span> — ячейки справа, а для <span class="red">rowspan</span> — ячейки снизу. Объединение начинается с текущей ячейки, к которой применён атрибут. Например, если указано <span class="red">colspan="2"</span>, то текущая ячейка объединяется с соседней справа.</p>
+<p>Разметка для примера выше без объединения ячеек будет выглядеть следующим образом:</p>
+  <div class="code-block">
+    <pre><code>&lt;table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Товар&lt;/th&gt;
+      &lt;th&gt;Количество&lt;/th&gt;
+      &lt;th&gt;Статус&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Шоколад «Кака-Тошка»&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td rowspan="2"&gt;Нет на складе&lt;/td&gt; &lt;!-- Объединение двух строк --&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Шоколад «Картошка»&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<p>Чтобы объединить ячейки, необходимо выполнить два шага:</p>
+<ol>
+    <li>Добавить в тег ячейки, которую нужно объединить, атрибут <span class="red">colspan</span> со значением, равным количеству объединяемых ячеек справа.</li>
+    <li>Удалить из строки лишние ячейки, которые объединяются.</li>
+</ol>
+<div class="code-block">
+  <pre><code>&lt;table&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Товар&lt;/th&gt;
+    &lt;th&gt;Цена&lt;/th&gt;
+    &lt;th&gt;Количество&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Чай&lt;/td&gt;
+    &lt;td colspan="2"&gt;Нет на складе&lt;/td&gt; &lt;!-- Объединение двух ячеек --&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<p>Для объединения ячеек по вертикали используется атрибут <span class="red">rowspan</span>. Процесс аналогичен объединению по горизонтали, с той лишь разницей, что удалять ячейки необходимо в строках, расположенных ниже текущей.</p>
+<div class="code-block">
+  <pre><code>&lt;table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;"&gt;
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Сотрудник&lt;/th&gt;
+    &lt;th&gt;Зарплата&lt;/th&gt;
+    &lt;th&gt;Бонусы&lt;/th&gt;
+    &lt;th&gt;Менеджер&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Дархан Редакторович&lt;/td&gt;
+    &lt;td&gt;750$&lt;/td&gt;
+    &lt;td&gt;63$&lt;/td&gt;
+    &lt;td rowspan="2"&gt;Малика Эштемэлевна&lt;/td&gt; &lt;!-- Объединение двух строк --&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Вадик Простовадик&lt;/td&gt;
+    &lt;td&gt;1200$&lt;/td&gt;
+    &lt;td&gt;0&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>  
+<p>В данном примере оба сотрудника работают с одним менеджером. Вместо того чтобы указывать его дважды, удобнее объединить ячейки по вертикали. Для этого использован атрибут <span class="red">rowspan="2"</span>, а четвёртая ячейка во второй строке была удалена, так как её заменяет объединённая ячейка из первой строки.</p>
+<div class="code-block">
+  <pre><code><table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+    <thead>
+      <tr>
+        <th>Сотрудник</th>
+        <th>Зарплата</th>
+        <th>Бонусы</th>
+        <th>Менеджер</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td>Дархан Редакторович</td>
+        <td>750$</td>
+        <td>63$</td>
+        <td rowspan="2">Малика Эштемэлевна</td> <!-- Объединение двух строк -->
+      </tr>
+      <tr>
+        <td>Вадик Простовадик</td>
+        <td>1200$</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+    </table></code></pre>
+</div>
+<h3>Задание</h3>
+<p>Создайте таблицу с двумя строками и тремя столбцами. Объедините первые две ячейки во второй строке с помощью атрибута <span class="red">colspan</span>. Первая строка должна выступать в роли заголовка таблицы.</p>
+    <h3>Полезное</h3>
+    <ul>
+      <li>После объединения ячеек общее количество ячеек в каждой строке таблицы должно оставаться одинаковым. Важно понимать разницу между количеством тегов <span class="red">&lt;td&gt;</span> и фактическим количеством логических ячеек. Например, если вы применяете атрибут <span class="red">colspan="2"</span>, то создаётся две логические ячейки, объединённые в одну. Поэтому необходимо удалить одну физическую ячейку из разметки, чтобы сохранить баланс.</li>
+      <li>При использовании атрибута <span class="red">colspan</span> удаляются ячейки из той же строки. Если применяется атрибут <span class="red">rowspan</span>, то удаляются ячейки из строк, расположенных ниже.</li>
+    </ul>
+</div>
+  <div class="right">
+    <h2>Редактор</h2>
+    <textarea id="code" placeholder="Введите HTML-код..."></textarea>
+    <button onclick="runCode()">Запустить</button>
+
+    <h3>Вывод:</h3>
+    <div id="output"></div>
+  </div>
+</div>
+<script src="../html_courses/html_course_script.js"></script>
+</body>
+</html>

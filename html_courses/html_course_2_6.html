@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Урок</title>
+  <link rel="stylesheet" href="../html_courses/html_course_style.css">
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/dark.css">
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <nav class="breadcrumbs">
+        <a href="../index.html">Главная</a> /
+        <a href="../html_course.html">HTML Курс</a> /
+        <a href="../html_courses/html_course_2_6.html"><span>HTML: Таблицы</span></a>
+    </nav>
+    <h2>HTML: Таблицы</h2>
+    <p>Таблицы — один из самых привычных способов представления информации. Мы встречаем их повсюду: в документах, таблицах умножения, описаниях товаров. Такой формат позволяет удобно сравнивать характеристики различных объектов. В веб-разработке таблицы также широко используются, хотя их разметка может показаться немного сложной.</p>
+<p>Таблица представляет собой составной элемент, который создаётся с помощью нескольких вложенных тегов. Это похоже на структуру списков, где есть общий контейнер и вложенные в него элементы.</p>
+<p>Разметка таблицы включает в себя несколько основных элементов:</p>
+<ul>
+    <li><span class="red">&lt;table&gt;</span> — область таблицы.</li>
+    <li><span class="red">&lt;tr&gt;</span> — строка таблицы.</li>
+    <li><span class="red">&lt;thead&gt;</span> — шапка таблицы.</li>
+    <li><span class="red">&lt;th&gt;</span> — ячейка шапки.</li>
+    <li><span class="red">&lt;tbody&gt;</span> — тело таблицы.</li>
+    <li><span class="red">&lt;td&gt;</span> — ячейка таблицы.</li>
+</ul>
+<p>Любая таблица начинается с парного тега <span class="red">&lt;table&gt;</span>.</p>
+<div class="code-block">
+    <pre><code>&lt;table&gt;
+  &lt;!-- Здесь будут данные таблицы --&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<p>Внутри этого тега создаются строки и столбцы таблицы. Для добавления строк используется тег <span class="red">&lt;tr&gt;</span>, а для создания ячеек — тег <span class="red">&lt;td&gt;</span>. Давайте создадим таблицу с двумя строками и тремя ячейками в каждой:</p>
+<div class="code-block">
+    <pre><code>&lt;table&gt;
+  &lt;tr&gt; &lt;!-- Строка --&gt;
+    &lt;td&gt;Ликёр «Jägermeister»&lt;/td&gt; &lt;!-- Ячейка --&gt;
+    &lt;td&gt;700 грамм&lt;/td&gt;
+    &lt;td&gt;12000 тенге&lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt; &lt;!-- Строка --&gt;
+    &lt;td&gt;Виски «Jack Daniels»&lt;/td&gt; &lt;!-- Ячейка --&gt;
+    &lt;td&gt;500 грамм&lt;/td&gt;
+    &lt;td&gt;10000 рублей&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<div class="code-block">
+    <pre><code><table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+  <tr> <!-- Строка -->
+    <td>Ликёр «Jägermeister»</td> <!-- Ячейка -->
+    <td>700 грамм</td>
+    <td>12000 тенге</td>
+  </tr>
+
+  <tr> <!-- Строка -->
+    <td>Виски «Jack Daniels»</td> <!-- Ячейка -->
+    <td>500 грамм</td>
+    <td>10000 тенге</td>
+  </tr>
+</table></code></pre>
+</div>
+<p><strong>Важно:</strong> Количество ячеек в каждой строке таблицы должно быть одинаковым.</p>
+<p>Попробуйте вставить этот код в редактор. Обратите внимание, что визуально таблица будет выглядеть иначе, чем в примерах теории. Это связано с тем, что браузеры по умолчанию не отображают видимые границы ячеек. Для добавления границ и стилизации таблицы используется CSS — специальный язык стилей, с которым вы познакомитесь в другом курсе.</p>
+<p>Сейчас данные таблицы отображаются, но не хватает заголовков, которые описывают содержимое каждого столбца. Для создания заголовков таблицы используется тег <span class="red">&lt;thead&gt;</span>, а для ячеек заголовков — тег <span class="red">&lt;th&gt;</span>. При этом структура таблицы остаётся неизменной. Давайте добавим заголовки в таблицу:</p>
+<div class="code-block">
+    <pre><code>&lt;table&gt;
+  &lt;thead&gt; &lt;!-- Шапка таблицы --&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Вкусняшка&lt;/th&gt; &lt;!-- Ячейка-заголовок --&gt;
+      &lt;th&gt;Вес&lt;/th&gt;
+      &lt;th&gt;Цена&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tr&gt; &lt;!-- Строка --&gt;
+    &lt;td&gt;Ликёр «Jägermeister»&lt;/td&gt; &lt;!-- Ячейка --&gt;
+    &lt;td&gt;700 грамм&lt;/td&gt;
+    &lt;td&gt;12000 тенге&lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt; &lt;!-- Строка --&gt;
+    &lt;td&gt;Виски «Jack Daniels»&lt;/td&gt; &lt;!-- Ячейка --&gt;
+    &lt;td&gt;500 грамм&lt;/td&gt;
+    &lt;td&gt;10000 рублей&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<div class="code-block">
+    <pre><code><table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; width: 100%;">
+        <thead> <!-- Шапка таблицы -->
+            <tr>
+              <th>Вкусняшка</th> <!-- Ячейка-заголовок -->
+              <th>Вес</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+  
+  <tr> <!-- Строка -->
+    <td>Ликёр «Jägermeister»</td> <!-- Ячейка -->
+    <td>700 грамм</td>
+    <td>12000 тенге</td>
+  </tr>
+
+  <tr> <!-- Строка -->
+    <td>Виски «Jack Daniels»</td> <!-- Ячейка -->
+    <td>500 грамм</td>
+    <td>10000 тенге</td>
+  </tr>
+</table></code></pre>
+</div>
+<p>Заключительным шагом является добавление тега <span class="red">&lt;tbody&gt;</span>, который используется для разметки основной части таблицы. Многие разработчики пропускают его, так как браузеры автоматически оборачивают строки, не заключённые в другие теги, в <span class="red">&lt;tbody&gt;</span>. Обычно в таблице используется только один <span class="red">&lt;tbody&gt;</span>. В больших таблицах можно добавлять несколько <span class="red">&lt;tbody&gt;</span> для разделения секций, но в большинстве случаев это не требуется.</p>
+<div class="code-block">
+    <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Вкусняшка&lt;/th&gt;
+      &lt;th&gt;Вес&lt;/th&gt;
+      &lt;th&gt;Цена&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt; &lt;!-- Тело таблицы --&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Шоколад «Тота»&lt;/td&gt;
+      &lt;td&gt;100 грамм&lt;/td&gt;
+      &lt;td&gt;200 рублей&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;td&gt;Шоколад «Тота Белый»&lt;/td&gt;
+      &lt;td&gt;150 грамм&lt;/td&gt;
+      &lt;td&gt;500 рублей&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<p>Дополнительно можно добавить «подвал» таблицы с помощью тега <span class="red">&lt;tfoot&gt;</span>. В нём можно разместить итоговую информацию, например, общую стоимость всех товаров.</p>
+<p>Также у таблицы можно задать заголовок, который помогает различать несколько таблиц на одной странице. Это особенно полезно, если выводится несколько таблиц одновременно. Для создания заголовка используется парный тег <span class="red">&lt;caption&gt;</span>. Заголовок должен располагаться сразу после тега <span class="red">&lt;table&gt;</span>. Давайте добавим заголовок в таблицу:</p>
+<div class="code-block">
+    <pre><code>&lt;table&gt;
+  &lt;caption&gt;Ассортимент шоколада «Каки-тошки»&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Вкусняшка&lt;/th&gt;
+      &lt;th&gt;Вес&lt;/th&gt;
+      &lt;th&gt;Цена&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt; &lt;!-- Тело таблицы --&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Шоколад «Тота»&lt;/td&gt;
+      &lt;td&gt;100 грамм&lt;/td&gt;
+      &lt;td&gt;200 рублей&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;td&gt;Шоколад «Тота Белый»&lt;/td&gt;
+      &lt;td&gt;150 грамм&lt;/td&gt;
+      &lt;td&gt;500 рублей&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+</div>
+<h3>Задание</h3>
+    <p>Создайте таблицу из 3 строк с 2 ячейками в каждой. Первая строка содержит в себе шапку таблицы</p>
+</div>
+    <div class="right">
+    <h2>Редактор</h2>
+    <textarea id="code" placeholder="Введите HTML-код..."></textarea>
+    <button onclick="runCode()">Запустить</button>
+
+    <h3>Вывод:</h3>
+    <div id="output"></div>
+  </div>
+</div>
+<script src="../html_courses/html_course_script.js"></script>
+</body>
+</html>
