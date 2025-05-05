@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Урок</title>
+  <link rel="stylesheet" href="../html_courses/html_course_style.css">
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/dark.css">
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <nav class="breadcrumbs">
+        <a href="../index.html">Главная</a> /
+        <a href="../html_course.html">HTML Курс</a> /
+        <a href="../html_courses/html_course_2_4.html"><span>HTML: Списки</span></a>
+    </nav>
+    <h2>HTML: Списки</h2>
+    <p>Списки — удобный способ отображения информации на странице. Они позволяют легко объединять связанные элементы, например, список покупок:</p>
+    <div class="code-block">
+    <pre><code>— Молоко
+— Хлеб
+— Вода</code></pre>
+</div>
+    <p>Можно сделать такой список с помощью трёх параграфов, но тогда, с первого взгляда, будет казаться, что это три разные фразы не объединённые общим смыслом.</p>
+    <div class="code-block">
+        <pre><code>Молоко
+Хлеб
+Вода</code></pre>
+    </div>
+    <p>Для правильного объединения такой информации применяются списки. В HTML они создаются с использованием нескольких вложенных тегов:</p>
+<ul>
+    <li><span class="red">&lt;ul&gt;</span> или <span class="red">&lt;ol&gt;</span> — для указания типа списка.</li>
+    <li><span class="red">&lt;li&gt;</span> — для добавления элемента списка.</li>
+</ul>
+<p>Пример базовой структуры списка выглядит так:</p>
+<div class="code-block">
+    <pre><code>&lt;тип_списка&gt;
+    &lt;пункт_списка&gt; Текст &lt;/пункт_списка&gt;
+&lt;/тип_списка&gt;</code></pre>
+    </div>
+    <h3>Маркированный список</h3>
+    <p>Для создания маркированного списка используется тег <span class="red">&lt;ul&gt;</span>. Он обозначает, что элементы списка будут отображаться с маркерами. Например:</p>
+    <div class="code-block">
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Молоко&lt;/li&gt;
+    &lt;li&gt;Хлеб&lt;/li&gt;
+    &lt;li&gt;Вода&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+    <div class="code-block">
+        <pre><code><ul><li>Молоко</li><li>Хлеб</li><li>Вода</li></ul></code></pre>
+    </div>
+    <h3>Нумерованный список</h3>
+    <p>Для упорядочивания информации применяются нумерованные списки, где каждый элемент имеет свой порядковый номер.</p>
+    <p>Такие списки особенно полезны для обозначения последовательности шагов или действий. Нумерованный список создаётся с использованием тега <span class="red">&lt;ol&gt;</span>, внутри которого элементы размещаются в тегах <span class="red">&lt;li&gt;</span>.</p>
+    <p>В разметке HTML выглядит следующим образом:</p>
+    <div class="code-block">
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;Купить корм&lt;/li&gt;
+    &lt;li&gt;Сходить к Алексею&lt;/li&gt;
+    &lt;li&gt;Приготовить ужин&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </div>
+    <p>Список дел на день</p>
+    <div class="code-block">
+        <pre><code><ol><li>Купить корм</li><li>Сходить к Алексею</li><li>Приготовить ужин</li></ol></code></pre>
+    </div>
+        <h3>Задание</h3>
+    <p>Создайте нумерованный список из 5 элементов с произвольным текстом</p>
+  </div>
+  <div class="right">
+    <h2>Редактор</h2>
+    <textarea id="code" placeholder="Введите HTML-код..."></textarea>
+    <button onclick="runCode()">Запустить</button>
+
+    <h3>Вывод:</h3>
+    <div id="output"></div>
+  </div>
+</div>
+<script src="../html_courses/html_course_script.js"></script>
+</body>
+</html>

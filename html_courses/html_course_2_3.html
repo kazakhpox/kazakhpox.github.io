@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Урок</title>
+  <link rel="stylesheet" href="../html_courses/html_course_style.css">
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/dark.css">
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <nav class="breadcrumbs">
+        <a href="../index.html">Главная</a> /
+        <a href="../html_course.html">HTML Курс</a> /
+        <a href="../html_courses/html_course_2_3.html"><span>HTML: Заголовки</span></a>
+    </nav>
+    <h2>HTML: Заголовки</h2>
+    <p>Чем больше текст, тем чаще он делится на логические разделы. Например, структура доклада, диплома или реферата обычно включает три основные части:</p>
+<ul>
+    <li>Введение</li>
+    <li>Основная часть</li>
+    <li>Заключение</li>
+</ul>
+<p>Такие разделения с использованием заголовков помогают быстрее ориентироваться в документе и находить нужную информацию.</p>
+<p>Для создания заголовков в HTML предусмотрено 6 парных тегов: <span class="red">&lt;h1&gt;</span>, <span class="red">&lt;h2&gt;</span>, <span class="red">&lt;h3&gt;</span>, <span class="red">&lt;h4&gt;</span>, <span class="red">&lt;h5&gt;</span>, <span class="red">&lt;h6&gt;</span>. Тег <span class="red">&lt;h1&gt;</span> используется для заголовка первого уровня, который является самым важным и описывает основную тему текста, а <span class="red">&lt;h6&gt;</span> — для заголовков шестого уровня, которые менее значимы.</p>
+<div class="code-block">
+    <pre><code>&lt;h1&gt;Заголовок первого уровня&lt;/h1&gt;
+&lt;h2&gt;Заголовок второго уровня&lt;/h2&gt;
+&lt;h3&gt;Заголовок третьего уровня&lt;/h3&gt;
+&lt;h4&gt;Заголовок четвёртого уровня&lt;/h4&gt;
+&lt;h5&gt;Заголовок пятого уровня&lt;/h5&gt;
+&lt;h6&gt;Заголовок шестого уровня&lt;/h6&gt;</code></pre>
+</div>
+    <p>Вот как они выглядят в браузере:</p>
+    <div class="code-block">
+        <pre><code><h1>Заголовок первого уровня</h1><h2>Заголовок второго уровня</h2><h3>Заголовок третьего уровня</h3><h4>Заголовок четвёртого уровня</h4><h5>Заголовок пятого уровня</h5><h6>Заголовок шестого уровня</h6></code></pre>
+    </div>
+    <p>Каждый заголовок более низкого уровня служит подразделом заголовка более высокого уровня. Это напоминает структуру оглавления книги, которая может выглядеть следующим образом:</p>
+<ul>
+    <li>Глава 1
+        <ul>
+            <li>Часть 1</li>
+            <li>Часть 2</li>
+                <ul>
+                <li>Примечания</li>
+                </ul>
+            <li>Часть 3</li>
+        </ul>
+    </li>
+    <li>Глава 2</li>
+</ul>
+<div class="code-block">
+    <pre><code>&lt;h1&gt;Лучшая книга на Земле&lt;/h1&gt;
+&lt;p&gt;Описание книги. Благодарность моему коту и двум моим собакам. Мяу!&lt;/p&gt;
+
+&lt;h2&gt;Глава 1&lt;/h2&gt;
+
+&lt;h3&gt;Часть 1&lt;/h3&gt;
+&lt;p&gt;Параграф с текстом&lt;/p&gt;
+&lt;p&gt;Параграф с текстом&lt;/p&gt;
+
+&lt;h3&gt;Часть 2&lt;/h3&gt;
+&lt;p&gt;Параграф с текстом&lt;/p&gt;
+&lt;p&gt;Параграф с текстом&lt;/p&gt;
+&lt;h4&gt;Примечания&lt;/h4&gt;
+&lt;p&gt;Текст этого примечания написан с любовью&lt;/p&gt;
+
+&lt;h3&gt;Часть 3&lt;/h3&gt;
+&lt;p&gt;Параграф с текстом&lt;/p&gt;
+&lt;p&gt;Параграф с текстом&lt;/p&gt;
+
+&lt;h2&gt;Глава 2&lt;/h2&gt;
+</code></pre>
+</div>
+    <h3>Задание</h3>
+    <p>Добавьте в редакторе заголовок первого и второго уровня с произвольным текстом</p>
+    <h3>Полезное</h3>
+    <ul>
+        <li>Соблюдайте последовательность заголовков. Не перескакивайте уровни</li>
+        <li>На странице, обычно, находится только один заголовок первого уровня</li>
+    </ul>
+  </div>
+  <div class="right">
+    <h2>Редактор</h2>
+    <textarea id="code" placeholder="Введите HTML-код..."></textarea>
+    <button onclick="runCode()">Запустить</button>
+
+    <h3>Вывод:</h3>
+    <div id="output"></div>
+  </div>
+</div>
+<script src="../html_courses/html_course_script.js"></script>
+</body>
+</html>

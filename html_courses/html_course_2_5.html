@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Урок</title>
+  <link rel="stylesheet" href="../html_courses/html_course_style.css">
+  <link rel="stylesheet" href="../css/breadcrumbs.css">
+  <link rel="stylesheet" href="../css/dark.css">
+</head>
+<body>
+<div class="container">
+  <div class="left">
+    <nav class="breadcrumbs">
+        <a href="../index.html">Главная</a> /
+        <a href="../html_course.html">HTML Курс</a> /
+        <a href="../html_courses/html_course_2_5.html"><span>HTML: Вложенные списки</span></a>
+    </nav>
+    <h2>HTML: Вложенные списки</h2>
+    <p>Иногда при составлении списка дел требуется разделить пункты на дополнительные подпункты. Например, пункт «Сходить в магазин» может включать список покупок.</p>
+<p>Для создания такой структуры применяются вложенные списки. Это позволяет использовать в качестве элемента списка не просто текст, а целый новый список, создавая более сложную иерархию:</p>    <div class="code-block">
+    <pre><code><ul><li>Сходить в магазин<ul><li>Купить молоко</li><li>Купить хлеб</li></ul></li><li>Программироваие</li></ul></code></pre>
+</div>
+    <p>Вот как это выглядит в HTML:</p>
+    <div class="code-block">
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Сходить в магазин
+    &lt;ul&gt;
+            &lt;li&gt;Купить молоко&lt;/li&gt;
+            &lt;li&gt;Купить хлеб&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Пройти уроки по програмиированию&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+    <p>Важно отметить, что вложенный список является частью пункта списка и находится внутри тега &lt;li&gt;:</p>
+    <div class="code-block">
+        <pre><code>&lt;li&gt;Сходить в магазин
+      &lt;ul&gt;
+        &lt;li&gt;Купить молоко&lt;/li&gt;
+        &lt;li&gt;Купить хлеб&lt;/li&gt;
+      &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+    </div>
+    <p>Вложенность позволяет сохранить смысловую связь, показывая, что вложенный список относится именно к пункту «Сходить в магазин», а не к другому элементу.</p>
+<p>Вы можете комбинировать списки разных типов, например, вкладывать маркированные списки в нумерованные и наоборот. Однако важно внимательно следить за правильным открытием и закрытием тегов. В случае ошибки браузер может попытаться исправить её автоматически, но результат может оказаться некорректным.</p>
+        <h3>Задание</h3>
+    <p>Создайте разметку для списка:</p>
+    <div class="code-block">
+        <pre><code><ol><li>JavaScript Career</li><ul><li>Frontend</li><li>Backend</li></ul><li>PHP Career</li></ol></code></pre>
+    </div>
+  </div>
+  <div class="right">
+    <h2>Редактор</h2>
+    <textarea id="code" placeholder="Введите HTML-код..."></textarea>
+    <button onclick="runCode()">Запустить</button>
+
+    <h3>Вывод:</h3>
+    <div id="output"></div>
+  </div>
+</div>
+<script src="../html_courses/html_course_script.js"></script>
+</body>
+</html>
